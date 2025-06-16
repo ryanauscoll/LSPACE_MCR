@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{float}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{L'SPACE MCR Document Team 18}
+\date{}
+\begin{document}
+
+\section*{1.3 Summary of Mission Location}
+
+Mars, the fourth planet from the Sun, is a cold, terrestrial world with a thin carbon dioxide (CO\textsubscript{2}) atmosphere. Its surface is shaped by volcanic activity, impact cratering, aeolian erosion, and seasonal freeze-thaw processes. The planet experiences extreme temperature variations, frequent dust storms, and high radiation levels due to the absence of a global magnetic field and protective upper atmosphere. Despite these challenges, Mars remains a prime candidate for exploration, largely because of its potential to harbor accessible water ice in the near subsurface.
+
+Orbital datasets from missions such as Mars Odyssey, the Mars Reconnaissance Orbiter (MRO), and the Subsurface Water Ice Mapping (SWIM) project have revealed compelling evidence of near-surface hydrogen-rich regolith in the northern mid-latitudes. These regions are believed to contain water ice at depths of less than one meter—ideal for both scientific investigation and in situ resource utilization (ISRU) in support of future human missions. The latitude range also offers favorable thermal conditions and sufficient solar availability for rover operations.
+
+This mission targets a 10 km × 10 km Exploration Zone (EZ) located within one of NASA’s high-priority shallow ice candidate zones, as defined by the SWIM maps. The region will be selected based on three key criteria:
+
+\begin{itemize}
+    \item Presence of subsurface water ice at 0–1 m depth
+    \item Geologic features indicative of volatile exposure or preservation
+    \item Navigable terrain within rover mobility and risk constraints
+\end{itemize}
+
+Candidate features within the EZ may include:
+
+\begin{itemize}
+    \item \textbf{Recent impact craters} — may expose subsurface volatiles via fresh ejecta
+    \item \textbf{Polygonal terrain} — indicates thermal contraction and seasonal freeze-thaw cycles
+    \item \textbf{Gently sloped surfaces} — improve rover stability and may help preserve underlying ice
+    \item \textbf{Spectral signatures from CRISM and SHARAD} — suggest hydrated minerals or water-bearing deposits
+\end{itemize}
+
+Site selection will be finalized using NASA’s JMARS (Java Mission-planning and Analysis for Remote Sensing) tool, informed by overlays from SWIM, CRISM mineralogical maps, elevation models, and slope data. Final considerations will include engineering feasibility, astrobiological interest, planetary protection constraints, and accessibility for surface mobility.
+
+Targeting this terrain directly advances NASA’s Moon to Mars objectives and the Mars Exploration Program Analysis Group (MEPAG) science goals by identifying accessible water resources for ISRU, while also informing future long-duration surface operations and life-detection strategies.
+
+\section*{1.4 Mission Requirements}
+
+The mission requirements are derived directly from the science and exploration objectives, the customer-imposed constraints in Table 1 of the Mission Task Document, and the anticipated operational environment on the Martian surface. These requirements provide measurable criteria by which the success of the mission can be assessed and guide system design and validation.
+
+\textbf{Science Requirements:}
+\begin{itemize}
+    \item The rover shall detect and characterize subsurface water ice and hydrated minerals within the top 1 meter of regolith.
+    \item The rover shall collect data at a minimum of two locations within the 10 km $\times$ 10 km Exploration Zone (EZ).
+    \item The rover shall provide in situ analysis of physical and chemical properties at each measurement site.
+    \item The rover shall include an astrobiology payload with a volume not exceeding 0.5 m$^3$ and a mass not exceeding 15 kg.
+\end{itemize}
+
+\textbf{Exploration Requirements:}
+\begin{itemize}
+    \item The rover shall assess the accessibility and state of preservation of subsurface water ice for ISRU purposes.
+    \item The rover shall identify locations that meet NASA criteria for future crewed mission support.
+\end{itemize}
+
+\textbf{Engineering Constraints:}
+\begin{itemize}
+    \item Total system mass shall not exceed 200 kg at launch.
+    \item The stowed volume shall fit within a cube of 2.5 meters per side.
+    \item The power system shall not include radioisotope sources and shall rely on solar or alternative non-nuclear energy.
+    \item The total mission cost shall not exceed \$450 million.
+\end{itemize}
+
+\textbf{Operational Requirements:}
+\begin{itemize}
+    \item The rover shall traverse a minimum of 5 km during the mission to ensure access to multiple sites.
+    \item The rover shall survive and operate in typical mid-latitude Martian surface conditions, including expected temperature extremes, dust exposure, and terrain variability.
+    \item The system shall store and transmit science data with sufficient resolution and fidelity to support mission goals.
+\end{itemize}
+
+These requirements ensure that the science objectives can be achieved while maintaining compliance with mass, volume, cost, and environmental constraints specified by NASA. They also support strategic planning for future human exploration of Mars by generating actionable data on water ice accessibility and site suitability.
+
+\section*{1.5 Physical Environmental Hazards}
+
+Mars presents a range of physical environmental hazards that must be accounted for when designing any surface mission. These hazards include geological, atmospheric, and radiation-related risks that can affect system reliability, science operations, rover mobility, and long-term data collection. Additionally, planetary protection protocols must be considered, especially given the inclusion of a human-relevant astrobiology payload.
+
+\subsection*{Geologic Hazards}
+
+The terrain within the Exploration Zone (EZ) may include surface features such as polygonal patterned ground, impact ejecta fields, rocky outcrops, and sloped regolith. These features can impede rover mobility, pose a risk of tipping or entrapment, and limit access to scientifically interesting sites. Loose regolith or dust can also reduce traction and clog mobility systems. Engineering teams must incorporate suspension systems capable of negotiating rough terrain, as well as hazard detection and autonomous navigation capabilities to avoid high-risk areas.
+
+Dust is a particularly persistent geologic hazard. Dust accumulation on solar panels can significantly degrade power generation efficiency over time. It can also interfere with sensor optics and thermal radiators, affecting both instrument performance and thermal control. Dust mitigation strategies, such as electrostatic dust removal or mechanical cleaning mechanisms, may be necessary depending on mission duration and power architecture.
+
+\subsection*{Atmospheric Hazards}
+
+While the Martian atmosphere is very thin (approximately 0.6\% of Earth's surface pressure), it can still support dynamic weather phenomena, including dust devils, regional dust storms, and seasonal winds. These phenomena introduce potential hazards to the mission in several ways:
+
+\begin{itemize}
+    \item \textbf{Dust storms:} While global storms are relatively rare, regional storms can obscure sunlight for days or weeks, disrupting solar power systems and reducing thermal regulation capability.
+    \item \textbf{Wind-driven erosion:} Windborne particulates may abrade external instrument surfaces or camera lenses over time, degrading image quality or sensor calibration.
+    \item \textbf{Temperature fluctuations:} Day-night temperature swings of 60--100°C are common and can induce thermal stress on instruments, cables, and joints. Thermal control systems must be robust and responsive.
+\end{itemize}
+
+\subsection*{Radiation Hazards}
+
+Mars lacks a strong global magnetic field and has only a very thin atmosphere, offering limited protection from solar energetic particles (SEPs) and galactic cosmic rays (GCRs). While short-duration robotic missions may not be highly susceptible to cumulative radiation damage, sensitive electronics and any biological payloads, such as the astrobiology experiment included in this mission, must be shielded appropriately.
+
+Radiation-induced degradation of sensors, memory storage devices, or microprocessors is a risk, especially during periods of solar activity. The rover’s avionics should be radiation-hardened where possible, and scientific instruments must be qualified to withstand expected radiation doses over the planned mission duration.
+
+\subsection*{Planetary Protection Considerations}
+
+Given the inclusion of a human-exploration-relevant astrobiology experiment, planetary protection protocols must be observed to avoid forward contamination of potentially habitable environments. Mars is classified as a Category IV planetary body by the Committee on Space Research (COSPAR), an international scientific organization that sets planetary protection guidelines. This classification requires careful sterilization procedures for components that may come into contact with subsurface material or that are part of life-detection experiments.
+
+The astrobiology payload must be designed, assembled, and verified under cleanroom conditions to prevent biological contamination from Earth. If the rover will drill or dig into the regolith, it must include protective barriers to prevent biological cross-contamination between samples. These considerations are essential for preserving scientific integrity and ensuring compliance with international planetary protection standards.
+
+\subsection*{Summary}
+
+The Martian surface poses multiple environmental hazards that directly influence the design of the rover, instrument suite, power systems, and science operations. These include:
+\begin{itemize}
+    \item Rough, variable terrain that challenges mobility
+    \item Dust accumulation and transport that affect power and instrumentation
+    \item Atmospheric effects like dust storms, wind erosion, and temperature swings
+    \item Radiation exposure that threatens electronic components and biological payloads
+    \item Planetary protection requirements for astrobiology-related hardware
+\end{itemize}
+
+Mitigating these risks will require integrated engineering responses, such as mobility planning, dust-tolerant hardware, robust thermal and radiation protection, and strict adherence to contamination control protocols. Understanding and preparing for these hazards is critical to ensuring mission success and scientific return.
+
+\end{document}
