@@ -5,18 +5,36 @@
 \usepackage{caption}
 \usepackage{amsmath}
 \usepackage{hyperref}
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black
+}
 \usepackage{graphicx}
 \usepackage{tocloft}  % Optional: improves TOC formatting
 \usepackage{acronym}  % For acronyms
+\setlength{\parindent}{0pt}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+
+\renewcommand{\arraystretch}{1.5} % Increases row height slightly for clarity
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}  % centered horizontally and vertically
+
 
 \begin{document}
-\title{L'SPACE Mission Concept Review\\\large Team 18 Vitalis}
-\author{}
-\date{\today}
 
-% Title Page
-\maketitle
-\thispagestyle{empty}
+\title{L'SPACE Mission Concept Review\\\large Team 18: Vitalis}
+\author{}
+\date{}
+
+\maketitle 
+
 
 
 \input{cover page}
@@ -31,35 +49,30 @@
 \clearpage
 
 % Table of Acronyms
-\section*{Table of Acronyms}
-\begin{acronym}[SWIM] % Longest acronym here for spacing
-  \acro{CDH}{Command and Data Handling}
-  \acro{EDL}{Entry, Descent, and Landing}
-  \acro{GPR}{Ground Penetrating Radar}
-  \acro{ISRU}{In-Situ Resource Utilization}
-  \acro{MCR}{Mission Concept Review}
-  \acro{MEPAG}{Mars Exploration Program Analysis Group}
-  \acro{STM}{Science Traceability Matrix}
-  \acro{SWIM}{Subsurface Water Ice Mapping}
-  \acro{TBD}{To Be Determined}
-  \acro{TBR}{To Be Resolved}
-  \acro{VNIR}{Visible and Near Infrared}
-\end{acronym}
+\input{Acronyms}
 \clearpage
+
 
 % Main content
 \input{Mission Statement}
 \input{Science Traceability Matrix (STM)}
 \input{Summary of Mission Location}
 \input{Mission Requirements}
+\input{Requirements Table}
 \input{Physical Environmental Hazards}
 \input{System Evaluation Criteria}
 \input{Concept of Operations}
 \input{Alternative Mission Concepts}
 \input{Programmatics}
 \input{Conclusion}
+\clearpage
+
+%use the chicage style
+
 \bibliography{refs}
+\clearpage
 \input{Declaration of Generative AI Use in the Writing Process}
+\clearpage
 \input{Appendix}
 
 \end{document}

@@ -1,36 +1,56 @@
 \section*{1.4 Mission Requirements}
 \addcontentsline{toc}{section}{1.4 Mission Requirements}
 
-The mission requirements are derived directly from the science and exploration objectives, the customer-imposed constraints in Table 1 of the Mission Task Document, and the anticipated operational environment on the Martian surface. These requirements provide measurable criteria by which the success of the mission can be assessed and guide system design and validation.
+The mission requirements are derived directly from the science and exploration objectives, the customer-imposed constraints outlined in the Mission Task Document, and the environmental conditions expected on the Martian surface. These requirements serve as concrete, measurable benchmarks for mission success and help define the design envelope for each subsystem.
+\\
+To meet its objectives, the mission must balance scientific return with strict engineering limitations, including mass, volume, power architecture, and cost. The rover must operate within a 10 km $\times$ 10 km Exploration Zone (EZ), collect high-confidence in situ data, and return information relevant to both scientific discovery and human exploration readiness. The inclusion of an astrobiology payload further introduces planetary protection considerations and strict volume/mass allocations.\\
 
-\textbf{Science Requirements:}
-\begin{itemize}
-    \item The rover shall detect and characterize subsurface water ice and hydrated minerals within the top 1 meter of regolith.
-    \item The rover shall collect data at a minimum of two locations within the 10 km $\times$ 10 km Exploration Zone (EZ).
-    \item The rover shall provide in situ analysis of physical and chemical properties at each measurement site.
-    \item The rover shall include an astrobiology payload with a volume not exceeding 0.5 m$^3$ and a mass not exceeding 15 kg.
-\end{itemize}
+The detailed system-level requirements are enumerated in the table below, each mapped to a rationale, parent and child dependencies, verification method, and whether the requirement is currently met.
 
-\textbf{Exploration Requirements:}
-\begin{itemize}
-    \item The rover shall assess the accessibility and state of preservation of subsurface water ice for ISRU purposes.
-    \item The rover shall identify locations that meet NASA criteria for future crewed mission support.
-\end{itemize}
-
-\textbf{Engineering Constraints:}
-\begin{itemize}
-    \item Total system mass shall not exceed 200 kg at launch.
-    \item The stowed volume shall fit within a cube of 2.5 meters per side.
-    \item The power system shall not include radioisotope sources and shall rely on solar or alternative non-nuclear energy.
-    \item The total mission cost shall not exceed \$450 million.
-\end{itemize}
-
-\textbf{Operational Requirements:}
-\begin{itemize}
-    \item The rover shall traverse a minimum of 5 km during the mission to ensure access to multiple sites.
-    \item The rover shall survive and operate in typical mid-latitude Martian surface conditions, including expected temperature extremes, dust exposure, and terrain variability.
-    \item The system shall store and transmit science data with sufficient resolution and fidelity to support mission goals.
-\end{itemize}
-
-These requirements ensure that the science objectives can be achieved while maintaining compliance with mass, volume, cost, and environmental constraints specified by NASA. They also support strategic planning for future human exploration of Mars by generating actionable data on water ice accessibility and site suitability.
-
+\begin{table}[H]
+\centering
+\caption{Derived Mission Requirements}
+\renewcommand{\arraystretch}{1.3}
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|C{1.2cm}|C{4.5cm}|C{3.5cm}|C{1.2cm}|C{2.8cm}|C{2cm}|C{1cm}|}
+\hline
+\textbf{Req \#} & \textbf{Requirement} & \textbf{Rationale} & \textbf{Parent Req} & \textbf{Child Req(s)} & \textbf{Verification Method} & \textbf{Met?} \\
+\hline
+MG-1 & The mission shall explore a region of Mars, analyzing possible hazards that the terrain contains and the accessibility of ice. & Enable safe navigation, and support mission planning and human exploration & - & All & Demonstration & Met\\
+\hline
+PM-1.1 & The mission shall follow all given constraints listed by the customer while planning for future missions. & Customer Constraints must be followed to ensure mission viability & MG-1 & PM-1.1.1–PM-1.1.7 & Inspection & Met \\
+\hline
+PM-1.1.1 & The mission shall not exceed a total mass of 200kg. & Customer Constraint & PM-1.1 & - & Inspection & Met \\
+\hline
+PM-1.1.2 & The mission shall not exceed the dimensions of 2.5m × 2.5m × 2.5m in the stowed configuration. & Customer Constraint & PM-1.1 & - & Inspection & Met \\
+\hline
+PM-1.1.3 & The mission shall reserve 15kg of mass and a 0.5m × 0.5m × 0.5m cube for the human exploration experiment. & Customer Constraint & PM-1.1 & - & Inspection & Met \\
+\hline
+PM-1.1.4 & The mission shall not have a Radioisotope Thermoelectric Generator. & Customer Constraint & PM-1.1 & - & Inspection & Met \\
+\hline
+PM-1.1.5 & The mission shall not exceed a cost of \$450M. & Customer Constraint & PM-1.1 & - & Inspection & Met \\
+\hline
+PM-1.1.6 & The mission shall be ready for integration with other systems by Oct 1, 2029. & Customer Constraint & PM-1.1 & - & Inspection & Met \\
+\hline
+PM-1.1.7 & The mission shall be ready for launch by Dec 1, 2029. & Customer Constraint & PM-1.1 & - & Inspection & Met \\
+\hline
+SCI-1.2 & The rover shall operate between ±60° latitude and in shallow ice zones. & Necessary for evaluating human settlement zones. & MG-1 & - & Demonstration & Met \\
+\hline
+SCI-1.3 & The mission shall determine availability of ice and liquid water. & To fulfill water study mission goal. & MG-1 & - & Inspection & Met \\
+\hline
+SCI-1.4 & Observe water stability through climate shifts. & Assess sustainability for future missions. & MG-1 & - & Demonstration & Met \\
+\hline
+ROV-1.5 & The rover shall use solar or battery power. Nuclear not permitted. & Only viable alternative. & MG-1 & - & Inspection & Met \\
+\hline
+ROV-1.6 & Operate in -80°F to 95°F. & Match equator-region temperature conditions. & MG-1 & - & Test & Met \\
+\hline
+ROV-1.7 & Include shielding and fault-tolerant CDH for radiation protection. & Mitigate intense solar particle events. & MG-1 & - & Test & Met \\
+\hline
+ROV-1.8 & The rover shall traverse minimum of 5km for ice analysis. & Ensure target area sampling diversity. & MG-1 & - & Demonstration & Met \\
+\hline
+ROV-1.9 & The mission shall collect and transmit ice location data. & Assess ice and water presence on Mars. & MG-1 & - & Demonstration & Met \\
+\hline
+\end{tabular}
+}
+\end{table}
