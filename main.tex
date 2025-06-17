@@ -1,5 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
+% \usepackage[scaled]{helvet}
+% \renewcommand{\familydefault}{\sfdefault}  % Use sans-serif as default
 \usepackage{float}
 \usepackage{array}
 \usepackage{caption}
@@ -21,6 +23,13 @@
 \usepackage{longtable}
 \usepackage{makecell}
 \usepackage{natbib}
+\usepackage{sectsty}
+
+% Set all section headings to 12pt AND bold
+% \sectionfont{\fontsize{12}{14}\selectfont\bfseries}
+% \subsectionfont{\fontsize{12}{14}\selectfont\bfseries}
+% \subsubsectionfont{\fontsize{12}{14}\selectfont\bfseries}
+
 \bibliographystyle{chicago}
 
 \renewcommand{\arraystretch}{1.5} % Increases row height slightly for clarity
@@ -34,7 +43,17 @@
 \date{}
 
 \maketitle 
-
+\begin{center}
+\begin{minipage}{0.45\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/newvitalis.png}
+\end{minipage}%
+\hspace{0.05\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/nasa.png}
+\end{minipage}
+\end{center}
 
 
 \input{cover page}
